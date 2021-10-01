@@ -1,0 +1,6 @@
+name: LibSlf4jCompat
+version: ${version}
+main: top.yertinmc.libslf4jcompat.LibSlf4jCompat
+load: STARTUP
+authors: [ YertinMC ]
+description: Add slf4j to legacy(1.12.2-) bukkit server

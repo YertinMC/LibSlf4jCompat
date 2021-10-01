@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
+}
+
+allprojects {
+    group 'top.yertinmc'
+    version '1.0'
+
+    repositories {
+        mavenCentral()
+        maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    }
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'com.github.johnrengelman.shadow'
+
+    shadowJar {
+        destinationDirectory = rootProject.shadowJar.destinationDirectory
+        archivesBaseName = "${rootProject.name}-${project.name}"
+    }
+}
+
+dependencies {
+    compileOnly 'org.bukkit:bukkit:1.12.2-R0.1-SNAPSHOT'
+
+    implementation 'org.slf4j:slf4j-api:2.0.0-alpha5'
+}
+
+processResources {
+    filteringCharset 'UTF-8'
+    filesMatching('plugin.yml') {
+        expand 'version': project.version
+    }
+}
