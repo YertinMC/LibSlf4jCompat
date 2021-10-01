@@ -32,6 +32,17 @@ You can download the correct version(see [Reason](#Reason)) of release jar here 
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/YertinMC/LibSlf4jCompat?style=flat-square)
 
+#### Bukkit
+
+Add this to you `plugin.yml`:
+
+```yaml
+softdepend:
+    - LibSlf4jCompat
+```
+
+
+
 #### Gradle
 
 ##### JitPack Repository
@@ -80,7 +91,7 @@ Then, add this:
 
 ##### Resolver
 
-Add it in your build.sbt at the end of resolvers:
+Add it in your `build.sbt` at the end of resolvers:
 
 ```scala
 resolvers += "jitpack" at "https://jitpack.io"
@@ -96,7 +107,7 @@ libraryDependencies += "top.yertinmc" % "LibSlf4jCompat" % "{{VERSION}}"
 
 ##### JitPack Repository
 
-Add it in your project.clj at the end of repositories:
+Add it in your `project.clj` at the end of repositories:
 
 ```scala
 :repositories [["jitpack" "https://jitpack.io"]]
