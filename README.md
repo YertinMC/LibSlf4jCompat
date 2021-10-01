@@ -4,7 +4,7 @@ This plugin adds slf4j to Bukkit servers.
 
 ## Reason
 
-Before [13w39a](https://minecraft.fandom.com/wiki/Java_Edition_13w39a)(not included, this is a snapshot of 1.7.2, note that 1.7 is only a pre-release of 1.7.2 after this snapshot), Minecraft uses `java.util.logging`(JUL or JDK14 Logging) as the logger of the game.
+Before [13w39a](https://minecraft.fandom.com/wiki/Java_Edition_13w39a)(not included, this is a snapshot of 1.7.2, note that 1.7 is only a pre-release of 1.7.2 after this snapshot), Minecraft uses `java.util.logging`(aka as JUL or JDK14 Logging) as the logger of the game.
 
 After [13w39a](https://minecraft.fandom.com/wiki/Java_Edition_13w39a)(included), Minecraft uses Log4j directly as the logger of the game.
 
