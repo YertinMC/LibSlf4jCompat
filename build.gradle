@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'maven-publish'
-    id 'com.github.johnrengelman.shadow' version '7.0.0'
+    id 'com.github.johnrengelman.shadow' version '7.0.0' apply false
 }
 
 allprojects {
@@ -25,7 +25,7 @@ subprojects {
     apply plugin: 'com.github.johnrengelman.shadow'
 
     shadowJar {
-        destinationDirectory = rootProject.shadowJar.destinationDirectory
+        destinationDirectory = rootProject.jar.destinationDirectory
         archivesBaseName = "${rootProject.name}-${project.name}"
     }
 }
