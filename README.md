@@ -30,9 +30,7 @@ You can download the correct version(see [Reason](#Reason)) of release jar here 
 
 ### For developer
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/YertinMC/LibSlf4jCompat?style=flat-square)
-
-#### Bukkit
+#### Step1. Bukkit
 
 Add this to you `plugin.yml`:
 
@@ -41,85 +39,30 @@ softdepend:
     - LibSlf4jCompat
 ```
 
+#### Step2. SLF4J
 
+Add slf4j dependency or use high version bukkit api.
 
-#### Gradle
+**DO NOT add this plugin using maven, there are some error on maven publishing**
 
-##### JitPack Repository
-
-```groovy
-repositories {
-    maven { url 'https://jitpack.io' }
-}
-```
-
-##### Dependency
+##### Gradle
 
 ```groovy
 dependencies {
-    implementation 'top.yertinmc:LibSlf4jCompat:{{VERSION}}'
+    implementation 'org.slf4j:slf4j-api:2.0.0-alpha5'
 }
 ```
 
-#### Maven
-
-##### JitPack Repository
-
-Add this to your `pom.xml`:
-
-````xml
-<repository>
-    <id>jitpack.io</id>
-    <url>https://jitpack.io</url>
-</repository>
-````
-
-##### Dependency
-
-Then, add this:
+##### Maven
 
 ```xml
 <dependency>
-    <groupId>top.yertinmc</groupId>
-    <artifactId>LibSlf4jCompat</artifactId>
-    <version>{{VERSION}}</version>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>2.0.0-alpha5</version>
     <scope>compile</scope>
 </dependency>
 ```
-
-#### SBT
-
-##### Resolver
-
-Add it in your `build.sbt` at the end of resolvers:
-
-```scala
-resolvers += "jitpack" at "https://jitpack.io"
-```
-
-##### Dependency
-
-```scala
-libraryDependencies += "top.yertinmc" % "LibSlf4jCompat" % "{{VERSION}}"
-```
-
-#### leiningen
-
-##### JitPack Repository
-
-Add it in your `project.clj` at the end of repositories:
-
-```scala
-:repositories [["jitpack" "https://jitpack.io"]]
-```
-
-##### Dependency
-
-```scala
-:dependencies [[top.yertinmc/LibSlf4jCompat "{{VERSION}}"]]	
-```
-
-
 
 ## LICENSE
 
